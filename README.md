@@ -11,3 +11,5 @@ Our users are Penn State students (mainly incoming) at University Park, and s
 
 **Desired Outcome:**<br>
 Increased student outreach and inclusion
+
+URL: https://ethanpinter.github.io/mtTechHackPSU/
