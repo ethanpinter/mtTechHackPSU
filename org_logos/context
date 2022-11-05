@@ -1,0 +1,59 @@
+(function() {
+var initialTopbarState = {"context":{"xsrfToken":"CfDJ8Az9GcAD4TpIm2NmyW6ywWFVsRFvn_kzdEcgjppChrZq382NZ-PC_RqMWoS9Y7u9UBrx5kpvJLe_V46Kb_hJEXGh6MVJkgOB4_7kWJfcgdT3B81wFGL2HJOpGosibOa4W6_UL_-L26aiMtQ0tUEDNhk","jwtToken":null,"environment":"USA","institution":{"id":8277,"name":"Pennsylvania State University System","src":"https://se-images.campuslabs.com/clink/images/c6b62573-cc39-4bdd-8081-0cd3bcbc0d8b3d23a73a-5de4-4732-a97a-97e6297b1d94.svg","accentColor":"#1e407c","config":{"institution":{"name":"Pennsylvania State University System","campusLabsHostUrl":"https://psu.campuslabs.com/engage/"},"communityTimeZone":"America/New_York","communityDirectoryEnabled":true,"analytics":{"enabled":true,"property":"UA-8953671-1"},"documents":{"enabled":true},"elections":{"enabled":true},"finance":{"enabled":false},"outcomes":{"enabled":false},"serviceHours":{"enabled":true},"transcript":{"enabled":true,"displayName":"Co-Curricular Record"},"curriculum":{"enabled":true},"experiences":{"enabled":true},"eventPass":{"enabled":true},"corq":{"enabled":true},"textMessaging":{"enabled":true}},"configuration":{"timeZone":"America/New_York","brandName":null,"preferredName":"Penn State University Park","campusLabsHostUrl":"https://psu.campuslabs.com/engage/","communityDirectory":{"enabled":true},"analytics":{"property":"UA-8953671-1","enabled":true},"documents":{"enabled":true},"elections":{"enabled":true},"finance":{"purchaseRequestPayeeEnabled":true,"enabled":false},"financePurchaseRequests":null,"financeFundingRequests":null,"budgeting":{"enabled":true},"roomReservation":{"enabled":false},"outcomes":{"enabled":false},"serviceHours":{"enabled":true},"transcript":{"displayName":"Co-Curricular Record","enabled":true},"paths":{"enabled":true},"experiences":{"enabled":true},"eventPass":{"available":true,"enabled":true},"corq":{"enabled":true},"voterEngagement":{"referralLink":"https://campuslabs.turbovote.org/?r=Engage-8277","enabled":false},"textMessaging":{"enabled":true}}},"user":null,"org":null,"imageServerBaseUrl":"https://se-images.campuslabs.com/clink/images/","contextRoot":""},"filePath":"https://static.campuslabsengage.com/comp-navigation/latest/navigation/standalone/main.esm.js?v=fc797eea-cec9-407d-9592-a9c4e1d22eca","links":{"branch":null,"organization":null,"discovery":[{"active":true,"link":"/","label":"Home","iconClass":"home","newWindow":false,"dividerAfter":false},{"active":false,"link":"/events","label":"Events","iconClass":"calendar","newWindow":false,"dividerAfter":false},{"active":false,"link":"/organizations","label":"Organizations","iconClass":"users","newWindow":false,"dividerAfter":false},{"active":false,"link":"/news","label":"News","iconClass":"newspaper-o","newWindow":false,"dividerAfter":false},{"active":false,"link":"/forms","label":"Forms","iconClass":"files-o","newWindow":false,"dividerAfter":false}],"userDrawer":null},"launchDarkly":{"microsoft-clarity":true}};
+var topbarFile = 'https://static.campuslabsengage.com/comp-navigation/latest/navigation/standalone/main.esm.js?v=fc797eea-cec9-407d-9592-a9c4e1d22eca';
+function storageAvailable(type) {
+try {
+var storage = window[type],
+x = '__storage_test__';
+storage.setItem(x, x);
+storage.removeItem(x);
+return true;
+} catch (e) {
+return (
+e instanceof DOMException &&
+(e.code === 22 ||
+e.code === 1014 ||
+e.name === 'QuotaExceededError' ||
+e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+storage.length !== 0
+);
+}
+}
+
+if (!storageAvailable('sessionStorage')) {
+window.engageStorage = {
+_data: {},
+setItem: function(id, val) {
+return (this._data[id] = String(val));
+},
+getItem: function(id) {
+return this._data.hasOwnProperty(id) ? this._data[id] : undefined;
+},
+removeItem: function(id) {
+return delete this._data[id];
+},
+clear: function() {
+return (this._data = {});
+},
+};
+} else {
+window.engageStorage = window.sessionStorage;
+}
+
+window.engageStorage.setItem(
+'initialTopbarState',
+JSON.stringify(initialTopbarState)
+);
+window.engageStorage.setItem('topbarFile', topbarFile);
+})();
+
+
+  (function(c,l,a,r,i,t,y){
+  c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "3xldl8atnn");
+
+if (global === undefined) {
+  var global = window;
+}
