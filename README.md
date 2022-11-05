@@ -9,4 +9,4 @@ Our users are Penn State students (mainly incoming) at University Park, and s
 
 Value Gained:
 
-Desired Outcome:
+Desired Outcome: Increased student outreach and inclusion
