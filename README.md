@@ -1,12 +1,13 @@
 # M&T Tech @ HackPSU
 
-The Problem:
+**The Problem:**<br>
 Students can be overwhelmed by the number of clubs, activities, and programs Penn State offers. 
 With hundreds of options to pick from, they can have trouble finding groups for their specific interests.
 
-Our End Users:
+**Our End Users:**<br>
 Our users are Penn State students (mainly incoming) at University Park, and s
 
-Value Gained:
+**Value Gained:**<br>
 
-Desired Outcome: Increased student outreach and inclusion
+**Desired Outcome:**<br>
+Increased student outreach and inclusion
