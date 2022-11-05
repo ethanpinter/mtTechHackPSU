@@ -1,4 +1,4 @@
-# mtTechHackPSU
+# M&T Tech @ HackPSU
 
 The Problem:
 Students can be overwhelmed by the number of clubs, activities, and programs Penn State offers. 
